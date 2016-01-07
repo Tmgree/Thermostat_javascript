@@ -3,7 +3,7 @@
 function Thermostat() {
 this.temperature = 20;
 this.power_save = true;
-this.colour = 2;
+this.colour = "medium";
 }
 var min_temp = 10;
 var max_temp_on = 25;
@@ -23,25 +23,27 @@ Thermostat.prototype.down = function() {
 
 };
 
-Thermostat.prototype.reset = function() {
+Thermostat.prototype.resett = function() {
    this.temperature = 20;
 };
 
 Thermostat.prototype.colour_change = function() {
-  if(this.temperature < 18) {this.colour = 1;}
-  else if (this.temperature > 25) {this.colour = 3;}
-  else {this.colour = 2;}
+  if(this.temperature < 18) {this.colour = "low";}
+  else if (this.temperature > 25) {this.colour = "high";}
+  else {this.colour = "medium";}
 };
 
 Thermostat.prototype.powerSavingModeOn = function() {
   this.power_save = true;
-  return "on"
+  return "on";
 };
 
 Thermostat.prototype.powerSavingModeOff = function() {
   this.power_save = false;
+  return "off";
 };
 
-Thermostat.prototype.powerSavingModeOff = function() {
-  this.power_save = false;
+Thermostat.prototype.powerSavingModestatus = function() {
+  if (this.power_save === true) {return "on";}
+  else {return "off";}
 };

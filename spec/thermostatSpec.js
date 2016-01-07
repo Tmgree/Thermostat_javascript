@@ -52,24 +52,24 @@ describe("Thermostat", function() {
      });
    });
 
-   describe("reset", function() {
-     it("it will reset the temperature back to 20", function() {
+   describe("resett", function() {
+     it("it will resett the temperature back to 20", function() {
        thermostat.temperature = min_temp;
-       thermostat.reset();
+       thermostat.resett();
        expect(thermostat.temperature).toEqual(20);
      });
    });
 
    describe("colour", function() {
      it("it will default be 2", function() {
-       expect(thermostat.colour).toEqual(2);
+       expect(thermostat.colour).toEqual("medium");
      });
 
      it("it will be 1 when the temperature is below 18", function() {
        thermostat.temperature = 18;
        thermostat.down();
        //debugger;
-       expect(thermostat.colour).toEqual(1);
+       expect(thermostat.colour).toEqual("low");
      });
 
      it("it will be 3 when the temperature is above 25", function() {
@@ -77,7 +77,7 @@ describe("Thermostat", function() {
        thermostat.temperature = 25;
        thermostat.up();
        //debugger;
-       expect(thermostat.colour).toEqual(3);
+       expect(thermostat.colour).toEqual("high");
    });
  });
 
