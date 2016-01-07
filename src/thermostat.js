@@ -28,9 +28,9 @@ Thermostat.prototype.resett = function() {
 };
 
 Thermostat.prototype.colour_change = function() {
-  if(this.temperature < 18) {this.colour = "low";}
-  else if (this.temperature > 25) {this.colour = "high";}
-  else {this.colour = "medium";}
+  if(this.temperature < 18) {this.colour = "low"; return "low";}
+  else if (this.temperature > 25) {this.colour = "high"; return "high";}
+  else {this.colour = "medium"; return "medium";}
 };
 
 Thermostat.prototype.powerSavingModeOn = function() {
