@@ -31,19 +31,16 @@
     <section>
       <h1>Current temperature: <span id="current-temperature"></span></h1>
       <form id="select-city">
-          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <!-- <input id="current-city" type="text" placeholder="Enter a city"></input> -->
+          <div class="ui-widget">
+        <label for="city">Your city: </label>
+        <input id="city">
           <input type="submit"></input>
         </form>
     </section>
-    <div class="ui-widget">
-  <label for="city">Your city: </label>
-  <input id="city">
-  Powered by <a href="http://geonames.org">geonames.org</a>
+
 </div>
 
-<div class="ui-widget" style="margin-top:2em; font-family:Arial">
-  Result:
-  <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
-</div>
+
   </body>
 </html>
