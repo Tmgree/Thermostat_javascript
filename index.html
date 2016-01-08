@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Thermostat</title>
-    <script src="src/thermostat.js"></script>
     <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
+    <script src="jquery_ui/external/jquery/jquery.js"></script>
+    <script src="jquery_ui/jquery-ui.js"></script>
+    <script src="src/thermostat.js"></script>
     <script src="thermostat_jquery.js"></script>
     <link type="text/css" rel="stylesheet" href="thermostat.css"/>
   </head>
@@ -31,7 +34,16 @@
           <input id="current-city" type="text" placeholder="Enter a city"></input>
           <input type="submit"></input>
         </form>
-</select>
     </section>
+    <div class="ui-widget">
+  <label for="city">Your city: </label>
+  <input id="city">
+  Powered by <a href="http://geonames.org">geonames.org</a>
+</div>
+
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+  Result:
+  <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+</div>
   </body>
 </html>
